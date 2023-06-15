@@ -38,6 +38,16 @@ public class Principal {
         System.out.println("Maratona: " + calculadora.getTempoTotal());
 
         System.out.println("Duração para maratonar Breaking Bad: " + BreakingBad.getDuracao());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodios episodio1BreakingBad = new Episodios();
+        episodio1BreakingBad.setNome("Mosca");
+        episodio1BreakingBad.setNumero(1);
+        episodio1BreakingBad.setSerie(BreakingBad);
+        episodio1BreakingBad.setTotalVisualizacoes(3000);
+        filtro.filtra(episodio1BreakingBad);
     }
 
 }
