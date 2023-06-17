@@ -7,7 +7,18 @@ public class Main {
         godsPlan.setReproducoes(20000000);
         godsPlan.setMinutos(3);
         godsPlan.setSegundos(22);
+//        godsPlan.fichaTecnicaAudio();
 
-        godsPlan.fichaTecnicaAudio();
+        Musicas itsOn = new Musicas();
+        itsOn.setNome("Its On");
+        itsOn.setCantor("Easy E");
+        itsOn.setDJ("DJ Raique");
+        itsOn.setGenero("Gangsta HipHop");
+        itsOn.setCurtidas(40000);
+        itsOn.setReproducoes(3000000);
+        itsOn.setMinutos(3);
+        itsOn.setSegundos(56);
+        itsOn.fichaTecnicaAudio();
+
     }
 }
