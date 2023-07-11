@@ -1,14 +1,18 @@
 import java.util.Scanner;
-
+import java.time.LocalTime;
 public class Colaboradores {
 Scanner scan = new Scanner(System.in);
     private String nome;
-    private int chegada, saidaAlmoco, voltaAlmoco, fimExpediente;
+    private  chegada, saidaAlmoco, voltaAlmoco, fimExpediente;
 
     void registro(){
         System.out.println("Digite seu nome:");
         nome = scan.nextLine();
-        nome.getChegada(2088);
+        System.out.println("Olá " + nome + " digite o horario de entrada.");
+        chegada = scan.nextInt();
+        System.out.println(nome + " seu horario de chagada foi as: " + chegada + " mesmo?");
+
+
     }
 
     public String getNome() {
