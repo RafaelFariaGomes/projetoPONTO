@@ -9,36 +9,57 @@ public class Colaboradores {
     private String cargo;
 
     void registro() {
+        int horaTeste;
+        LocalDateTime horaAtual = LocalDateTime.now();
+
         System.out.println("\nDigite seu nome completo:");
         nome = scan.nextLine();
-        LocalDateTime horaAtual = LocalDateTime.now();
 
         System.out.println("Digite seu cargo:");
         cargo = scan.nextLine();
 
+//fomatação das horas utilizadas no Script
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        String chegada = horaAtual.format(formatter);
+        String horario = horaAtual.format(formatter);
+        DateTimeFormatter horaTesteFormatada = DateTimeFormatter.ofPattern("HH");
 
-        System.out.println("seu ponto foi batido as: " + chegada);
+        horaTeste = Integer.parseInt(horaAtual.format(horaTesteFormatada));
+        System.out.println(horaTeste);
+        System.out.println(horario);
+        if(chegada == null){
+            chegada = horario;
+            System.out.println("seu ponto de chegada foi batido as: " + horario);
+        } else if (chegada != null){
+            saidaAlmoco = horario;
+            System.out.println("seu ponto de saida para o Almoço, foi batido as: " + horario);
+        } else if(saidaAlmoco != null && chegada != null){
+            voltaAlmoco = horario;
+            System.out.println("seu ponto de Volta do Almoço foi batido as: " + horario);
+        } else {
+            fimExpediente = horario;
+            System.out.println("seu ponto de Fim de Expediente foi batido as: " + horario);
+        }
     }
     void criarSenha() {
         // este metodo a baixo pega a senha do usuario,
         // pega a confirmação da senha do usuario
         // e por ultimo ve se as duas variaveis de senha e confirmação são iguais
         // caso forem iguais, inclue a senha na variavel final (senhaColaborador) essa sim, será utilizada como a senha real
-        String senha = "";
-        String confirmacao = ".";
+        String senha;
+        String confirmacao = "";
         String senhaColaborador;
+        System.out.println("Digite seu nome:");
+        nome = scan.nextLine();
+        System.out.printf(nome + " digite sua senha:") ;
+        senha = scan.nextLine();
 
         while(senha.equals(confirmacao) == false){
-            System.out.println("digite sua senha:") ;
-            senha = scan.nextLine();
-            System.out.println("confirme sua senha:") ;
+            System.out.printf(nome + " confirme sua senha:") ;
             confirmacao = scan.nextLine();
 
             if(senha.equals(confirmacao)){
                 senhaColaborador = senha;
-                System.out.printf("sua senha: " + senhaColaborador);
+                System.out.printf("Senha cadastrada!");
                 break;
             }
             System.out.println("Algum caracter não condiz com a senha, digite novamente");
