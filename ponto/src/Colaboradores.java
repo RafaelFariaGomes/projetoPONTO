@@ -18,4 +18,22 @@ public class Colaboradores {
 
         System.out.println("seu ponto foi batido as: " + chegada);
     }
+    //pegar a senha do usuario, pegar a confirmação de senha do usuario e ver se é igual as duas, caso for igual, jogar a senha na variavel final (senhaColaborador)
+    void criarSenha() {
+        String senha;
+        String confirmacao;
+        String senhaColaborador;
+
+        System.out.print("digite sua senha") ;
+        senha = scan.nextLine();
+
+        System.out.print("confirme sua senha: ") ;
+        confirmacao = scan.nextLine();
+
+        if(senha == confirmacao){
+            senhaColaborador = senha;
+        } else {
+            System.out.println("Algum caracter não condiz com a senha, digite novamente");
+        }
+    }
 }
