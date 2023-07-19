@@ -6,12 +6,15 @@ public class Colaboradores {
     private String nome;
     private String chegada, saidaAlmoco, voltaAlmoco, fimExpediente;
     private String horaAtual;
-    private String Cargo;
+    private String cargo;
 
     void registro() {
-        System.out.println("Digite seu nome:");
+        System.out.println("Digite seu nome completo:");
         nome = scan.nextLine();
         LocalDateTime horaAtual = LocalDateTime.now();
+
+        System.out.println("Digite seu cargo:");
+        cargo = scan.nextLine();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         String chegada = horaAtual.format(formatter);
@@ -40,5 +43,47 @@ public class Colaboradores {
             }
             System.out.println("Algum caracter não condiz com a senha, digite novamente");
         }
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getChegada() {
+        return chegada;
+    }
+    public void setChegada(String chegada) {
+        this.chegada = chegada;
+    }
+    public String getSaidaAlmoco() {
+        return saidaAlmoco;
+    }
+    public void setSaidaAlmoco(String saidaAlmoco) {
+        this.saidaAlmoco = saidaAlmoco;
+    }
+    public String getVoltaAlmoco() {
+        return voltaAlmoco;
+    }
+    public void setVoltaAlmoco(String voltaAlmoco) {
+        this.voltaAlmoco = voltaAlmoco;
+    }
+    public String getFimExpediente() {
+        return fimExpediente;
+    }
+    public void setFimExpediente(String fimExpediente) {
+        this.fimExpediente = fimExpediente;
+    }
+    public String getHoraAtual() {
+        return horaAtual;
+    }
+    public void setHoraAtual(String horaAtual) {
+        this.horaAtual = horaAtual;
+    }
+    public String getCargo() {
+        return cargo;
+    }
+    public void setCargo(String cargo) {
+        cargo = cargo;
     }
 }
