@@ -9,7 +9,7 @@ public class Colaboradores {
     private String cargo;
 
     void registro() {
-        System.out.println("Digite seu nome completo:");
+        System.out.println("\nDigite seu nome completo:");
         nome = scan.nextLine();
         LocalDateTime horaAtual = LocalDateTime.now();
 
