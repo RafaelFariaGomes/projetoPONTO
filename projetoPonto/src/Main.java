@@ -13,7 +13,8 @@ public class Main {
                 """);
         escolha = scan.nextInt();
         while (escolha != 1 || escolha != 2){
-        if(escolha == 1){
+        //if(colocar uma validação se a variavel ESCOLHA é do tipo INT)
+            if(escolha == 1){
         colaborador1.registro();
         break;
         } else if (escolha == 2){

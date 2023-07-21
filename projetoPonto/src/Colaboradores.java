@@ -15,8 +15,6 @@ public class Colaboradores {
         System.out.println("\nDigite seu nome completo:");
         nome = scan.nextLine();
 
-        System.out.println("Digite seu cargo:");
-        cargo = scan.nextLine();
 
 //fomatação das horas utilizadas no Script
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
@@ -24,20 +22,20 @@ public class Colaboradores {
         DateTimeFormatter horaTesteFormatada = DateTimeFormatter.ofPattern("HH");
 
         horaTeste = Integer.parseInt(horaAtual.format(horaTesteFormatada));
-        System.out.println(horaTeste);
+        //System.out.println(horaTeste);
         System.out.println(horario);
         if(chegada == null){
             chegada = horario;
-            System.out.println("seu ponto de chegada foi batido as: " + horario);
+            System.out.printf(nome  + " seu ponto de chegada foi batido as: " + horario);
         } else if (chegada != null){
             saidaAlmoco = horario;
-            System.out.println("seu ponto de saida para o Almoço, foi batido as: " + horario);
+            System.out.println(nome  + " seu ponto de saida para o Almoço, foi batido as: " + horario);
         } else if(saidaAlmoco != null && chegada != null){
             voltaAlmoco = horario;
-            System.out.println("seu ponto de Volta do Almoço foi batido as: " + horario);
+            System.out.println(nome  + " seu ponto de Volta do Almoço foi batido as: " + horario);
         } else {
             fimExpediente = horario;
-            System.out.println("seu ponto de Fim de Expediente foi batido as: " + horario);
+            System.out.println(nome  + " seu ponto de Fim de Expediente foi batido as: " + horario);
         }
     }
     void criarSenha() {
@@ -48,13 +46,15 @@ public class Colaboradores {
         String senha;
         String confirmacao = "";
         String senhaColaborador;
-        System.out.println("Digite seu nome:");
+        System.out.println("Digite seu nome completo:");
         nome = scan.nextLine();
-        System.out.printf(nome + " digite sua senha:") ;
+        System.out.println("Digite seu cargo:");
+        cargo = scan.nextLine();
+        System.out.printf(nome + " digite sua senha: ") ;
         senha = scan.nextLine();
 
         while(senha.equals(confirmacao) == false){
-            System.out.printf(nome + " confirme sua senha:") ;
+            System.out.printf(nome + " confirme sua senha: ") ;
             confirmacao = scan.nextLine();
 
             if(senha.equals(confirmacao)){
@@ -62,7 +62,7 @@ public class Colaboradores {
                 System.out.printf("Senha cadastrada!");
                 break;
             }
-            System.out.println("Algum caracter não condiz com a senha, digite novamente");
+            System.out.println("As senhas não coincidem, tente novamente");
         }
     }
     public String getNome() {
