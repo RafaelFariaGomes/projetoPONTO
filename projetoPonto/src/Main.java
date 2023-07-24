@@ -10,20 +10,19 @@ public class Main {
                 
                 se você já é um funcionario cadastrado no sistema de Horarios, digite 1
                 caso você é da grencia e deseja cadastrar um novo usuario, digite 2
+                para sair, digite 0
                 """);
         escolha = scan.nextInt();
-        while (escolha != 1 || escolha != 2){
-        //if(colocar uma validação se a variavel ESCOLHA é do tipo INT)
-            if(escolha == 1){
+        while (true){
+        if(escolha == 1){
         colaborador1.registro();
-        break;
+        //break;
         } else if (escolha == 2){
             colaborador1.criarSenha();
-            break;
-        } else {
-            System.out.println("Sua escolha não foi coerrente com as alternativas," +
-                    "\ntente novamente!");
-        }
+            //break;
+        } else if (escolha == 0){
+                break;
+            }
         }
     }
 }
