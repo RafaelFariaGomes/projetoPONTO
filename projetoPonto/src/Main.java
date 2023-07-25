@@ -5,6 +5,8 @@ public class Main {
         String escolha;
         Colaboradores colaborador1 = new Colaboradores();
 
+        // este laço de repetição permite que o programa após rodar qualquer funcionalidade
+        // volte ao "menu principal"
         while (true){
             System.out.printf("""
                 \nSISTEMA DE HORARIOS SMART CONECTA ltda

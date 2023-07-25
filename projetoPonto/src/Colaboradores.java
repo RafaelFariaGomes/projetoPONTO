@@ -15,7 +15,6 @@ public class Colaboradores {
         System.out.println("\nDigite seu nome completo:");
         nome = scan.nextLine();
 
-
 //fomatação das horas utilizadas no Script
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         String horario = horaAtual.format(formatter);
