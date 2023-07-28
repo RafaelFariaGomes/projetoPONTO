@@ -7,6 +7,7 @@ public class Colaboradores {
     private String chegada, saidaAlmoco, voltaAlmoco, fimExpediente;
     private String horaAtual;
     private String cargo;
+    public String nomeObjeto;
 
     void registro() {
         int horaTeste;
@@ -37,7 +38,7 @@ public class Colaboradores {
             System.out.println(nome  + " seu ponto de Fim de Expediente foi batido as: " + horario);
         }
     }
-    void criarSenha() {
+    void cadastroFuncionario() {
         // este metodo a baixo pega a senha do usuario,
         // pega a confirmação da senha do usuario
         // e por ultimo ve se as duas variaveis de senha e confirmação são iguais
@@ -45,6 +46,7 @@ public class Colaboradores {
         String senha;
         String confirmacao = "";
         String senhaColaborador;
+
         System.out.println("Digite seu nome completo:");
         nome = scan.nextLine();
         System.out.println("Digite seu cargo:");
@@ -63,6 +65,14 @@ public class Colaboradores {
             }
             System.out.println("As senhas não coincidem, tente novamente");
         }
+    }
+    public void recebeDados(){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite seu nome completo:");
+        nome = scan.nextLine();
+        System.out.println("Agora digite apenas seu 1° nome");
+        nomeObjeto = scan.nextLine();
     }
     public String getNome() {
         return nome;

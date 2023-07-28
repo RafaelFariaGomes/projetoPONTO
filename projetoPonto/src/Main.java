@@ -20,7 +20,7 @@ public class Main {
         colaborador1.registro();
         //break;
         }else if (escolha.equals("2")){
-            colaborador1.criarSenha();
+            colaborador1.cadastroFuncionario();
             //break;
         }else if (escolha.equals("0")){
                 break;
